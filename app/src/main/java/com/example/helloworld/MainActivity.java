@@ -8,7 +8,9 @@ import android.widget.Button;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.helloworld.gridview.GridViewActivity;
 import com.example.helloworld.listview.ListViewActivity;
+import com.example.helloworld.recycleview.RecycleViewActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -19,7 +21,8 @@ public class MainActivity extends AppCompatActivity {
     private Button mBtnChecxBox;
     private Button mBtnImageView;
     private Button mBtnListView;
-
+    private Button mBtnGridView;
+    private Button mBtnRecycleView;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -32,6 +35,8 @@ public class MainActivity extends AppCompatActivity {
         mBtnChecxBox=findViewById(R.id.btn_checkbox);
         mBtnImageView=findViewById(R.id.btn_imageview);
         mBtnListView=findViewById(R.id.btn_listview);
+        mBtnGridView=findViewById(R.id.btn_gridtview);
+        mBtnRecycleView=findViewById(R.id.btn_recycleview);
         setListener();
     }
 
@@ -44,6 +49,8 @@ public class MainActivity extends AppCompatActivity {
         mBtnChecxBox.setOnClickListener(onClick);
         mBtnImageView.setOnClickListener(onClick);
         mBtnListView.setOnClickListener(onClick);
+        mBtnGridView.setOnClickListener(onClick);
+        mBtnRecycleView.setOnClickListener(onClick);
     }
 
     private class OnClick implements View.OnClickListener {
@@ -72,6 +79,12 @@ public class MainActivity extends AppCompatActivity {
                     break;
                 case R.id.btn_listview:
                     intent = new Intent(MainActivity.this, ListViewActivity.class);
+                    break;
+                case R.id.btn_gridtview:
+                    intent = new Intent(MainActivity.this, GridViewActivity.class);
+                    break;
+                case R.id.btn_recycleview:
+                    intent = new Intent(MainActivity.this, RecycleViewActivity.class);
                     break;
             }
             startActivity(intent);
