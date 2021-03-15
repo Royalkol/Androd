@@ -103,19 +103,18 @@ public class DialogActivity extends AppCompatActivity {
                     break;
                 case R.id.btn_dialog5:
                     AlertDialog.Builder builder5 = new AlertDialog.Builder(DialogActivity.this);
-                    View view = LayoutInflater.from(DialogActivity.this).inflate(R.layout.layout_dialog,null);
-                    EditText etUsername =view.findViewById(R.id.et_username);
-                    EditText edPassword =view.findViewById(R.id.et_password);
-                    Button btnLogin=view.findViewById(R.id.btn_login);
+                    View view = LayoutInflater.from(DialogActivity.this).inflate(R.layout.layout_dialog, null);
+                    EditText etUsername = view.findViewById(R.id.et_username);
+                    EditText edPassword = view.findViewById(R.id.et_password);
+                    Button btnLogin = view.findViewById(R.id.btn_login);
                     btnLogin.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
                             //
                         }
                     });
-                    builder5.setTitle("请先登录").setView(view);
+                    builder5.setTitle("请先登录").setView(view).show();
                     break;
-
             }
         }
     }

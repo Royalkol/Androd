@@ -36,7 +36,7 @@
         android:id="@+id/btn_dialog5"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="style4"
+        android:text="style5"
         android:textAllCaps="false"/>
 
 </LinearLayout>
