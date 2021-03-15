@@ -9,6 +9,7 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.helloworld.gridview.GridViewActivity;
+import com.example.helloworld.jump.AActivity;
 import com.example.helloworld.listview.ListViewActivity;
 import com.example.helloworld.recycleview.RecycleViewActivity;
 
@@ -29,6 +30,9 @@ public class UIActivity extends AppCompatActivity {
     private Button mBtnProgress;
     private Button mBtnCustomDialog;
     private Button mBtnPupopWindow;
+    private Button mBtnLife;
+    private Button mBtnJump;
+
 
 
 
@@ -53,6 +57,8 @@ public class UIActivity extends AppCompatActivity {
         mBtnProgress=findViewById(R.id.btn_progress);
         mBtnCustomDialog=findViewById(R.id.btn_customdialog);
         mBtnPupopWindow=findViewById(R.id.btn_popupwindow);
+        mBtnLife=findViewById(R.id.btn_life);
+        mBtnJump=findViewById(R.id.btn_jump);
         setListener();
     }
 
@@ -73,6 +79,8 @@ public class UIActivity extends AppCompatActivity {
         mBtnProgress.setOnClickListener(onClick);
         mBtnCustomDialog.setOnClickListener(onClick);
         mBtnPupopWindow.setOnClickListener(onClick);
+        mBtnLife.setOnClickListener(onClick);
+        mBtnJump.setOnClickListener(onClick);
     }
 
     private class OnClick implements View.OnClickListener {
@@ -125,6 +133,12 @@ public class UIActivity extends AppCompatActivity {
                     break;
                 case R.id.btn_popupwindow:
                     intent = new Intent(UIActivity.this, PopupWindowActivity.class);
+                    break;
+                case R.id.btn_life:
+                    intent = new Intent(UIActivity.this, LifeCycleActivity.class);
+                    break;
+                case R.id.btn_jump:
+                    intent = new Intent(UIActivity.this, AActivity.class);
                     break;
             }
             startActivity(intent);

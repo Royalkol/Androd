@@ -107,6 +107,21 @@
             android:layout_height="wrap_content"
             android:text="PopupWindow"
             android:textAllCaps="false"/>
+
+        <Button
+            android:id="@+id/btn_life"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="生命周期"
+            android:textAllCaps="false"/>
+
+        <Button
+            android:id="@+id/btn_jump"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="跳转"
+            android:textAllCaps="false"/>
+
     </LinearLayout>
 
 
